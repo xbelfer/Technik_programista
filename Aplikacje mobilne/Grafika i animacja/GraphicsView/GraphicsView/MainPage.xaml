@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:GraphicsView.Drawables"
+             x:Class="GraphicsView.MainPage">
+    <ContentPage.Resources>
+        <drawable:FilledEllipseDrawable x:Key="elipse"/>
+        <drawable:PathDrawable x:Key="path"/>
+        <drawable:ImageDrawable x:Key="img"/>
+        <drawable:DownsizeImageDrawable x:Key="downsizeimg"/>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Elipsa"
+                Style="{StaticResource Headline}"/>
+            <GraphicsView Drawable="{StaticResource elipse}"
+                          HeightRequest="100"
+                          WidthRequest="150"/>
+
+            <Label
+                Text="Ścieżka"
+                Style="{StaticResource Headline}"/>
+            <GraphicsView Drawable="{StaticResource path}"
+                          HeightRequest="100"
+                          WidthRequest="150"/>
+
+            
+            <Label
+                Text="Zdjęcie"
+                Style="{StaticResource Headline}"/>
+            <GraphicsView Drawable="{StaticResource img}"
+                          HeightRequest="300"
+                          WidthRequest="400"
+                          HorizontalOptions="Center"/>
+
+            <Label
+                Text="Zdjęcie okrojone"
+                Style="{StaticResource Headline}"/>
+            <GraphicsView Drawable="{StaticResource downsizeimg}"
+                          HeightRequest="150"
+                          WidthRequest="200"
+                          HorizontalOptions="Center"
+                          />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

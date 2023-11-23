@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kalkulator.MainPage"
+             Title="Kalkulator 1.0"
+             BackgroundColor="LightGrey">
+
+    <Grid
+        ColumnDefinitions="*,*,*,*"
+        RowDefinitions="*,*,*,*,*,*,*,*"
+        ColumnSpacing="10"
+        RowSpacing="10"
+        Margin="10">
+
+        <Border
+            StrokeThickness="2"
+            Grid.ColumnSpan="4"
+            Padding="10"
+            StrokeShape="RoundRectangle 5,20,20,5">
+            <Entry
+                x:Name="out1"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                IsReadOnly="True"
+                Text="0"
+                FontSize="30"/>
+        </Border>
+
+        <Button
+            Grid.Column="0"
+            Grid.Row="1"
+            FontSize="50"
+            Text="1"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="1"
+            Grid.Row="1"
+            FontSize="50"
+            Text="4"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.Row="1"
+            FontSize="50"
+            Text="7"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="3"
+            Grid.Row="1"
+            FontSize="50"
+            Text="0"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="0"
+            Grid.Row="2"
+            FontSize="50"
+            Text="2"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="1"
+            Grid.Row="2"
+            FontSize="50"
+            Text="5"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.Row="2"
+            FontSize="50"
+            Text="8"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="3"
+            Grid.Row="2"
+            FontSize="50"
+            Text="C"
+            Clicked="usun_dzialanie"/>
+
+        <Button
+            Grid.Column="0"
+            Grid.Row="3"
+            FontSize="50"
+            Text="3"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+        
+        <Button
+            Grid.Column="1"
+            Grid.Row="3"
+            FontSize="50"
+            Text="6"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.Row="3"
+            FontSize="50"
+            Text="9"
+            Background="Gray"
+            Clicked="WriteNumber_Cliked"/>
+
+        <Button
+            Grid.Column="3"
+            Grid.Row="3"
+            FontSize="50"
+            Text="="
+            Clicked="oblicz"/>
+
+        <Button
+            Grid.Column="0"
+            Grid.Row="4"
+            FontSize="50"
+            Text="+"
+            Background="Violet"
+            Clicked="plus"/>
+
+        <Button
+            Grid.Column="1"
+            Grid.Row="4"
+            FontSize="50"
+            Text="-"
+            Background="Violet"
+            Clicked="minus"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.Row="4"
+            FontSize="50"
+            Text="*"
+            Background="Violet"
+            Clicked="razy"/>
+
+        <Button
+            Grid.Column="3"
+            Grid.Row="4"
+            FontSize="50"
+            Text="/"
+            Background="Violet"
+            Clicked="dzielienie"/>
+
+        <Button
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="5"
+            FontSize="50"
+            Text="sqrt"
+            Background="Purple"
+            Clicked="pierwiastek"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.Row="5"
+            FontSize="50"
+            Text="pow"
+            Background="Purple"
+            Clicked="potega"/>
+
+        <Button
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            FontSize="50"
+            Text="GCD"
+            Background="Purple"
+            Clicked="GCD"/>
+
+        <Button
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            FontSize="50"
+            Text="prime"
+            Background="Purple"
+            Clicked="prime"/>
+
+        <Label
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            Text="Command: "
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="End"
+            FontSize="20"/>
+
+        <Entry
+            x:Name="out2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            VerticalTextAlignment="Center"
+            HeightRequest="60"
+            FontSize="20"/>
+
+    </Grid>
+
+</ContentPage>
