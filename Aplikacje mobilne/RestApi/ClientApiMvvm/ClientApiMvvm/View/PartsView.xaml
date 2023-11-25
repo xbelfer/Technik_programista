@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ClientApi.Pages.PartsPage"
-             xmlns:model="clr-namespace:ClientApi.Model"
-             x:DataType="model:Part"
-             Title="PartsPage">
+             xmlns:vm="clr-namespace:ClientApiMvvm.ViewModel"
+             x:Class="ClientApiMvvm.View.PartsView"
+             Title="PartsView">
+    <ContentPage.BindingContext>
+        <vm:PartsViewModel />
+    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout Margin="5">
             <Label 
                 Text="Lista Części"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="24" />
-            <Button Text="Dodaj" Clicked="OnClicked_AddPart"/>
+            <Button Text="Dodaj" Command="{Binding AddNewPartCommand}"/>
 
-            <CollectionView x:Name="cvParts" 
+            <CollectionView ItemsSource="{Binding Parts}"
                             SelectionMode="Single"
-                            SelectionChanged="partSelected_Changed">
+                            SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                            SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Margin="0, 10, 0, 10" Spacing="5">

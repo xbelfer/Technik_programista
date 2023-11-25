@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ClientApi.Pages.AddPartPage"
-             Title="AddPartPage">
+             x:Class="ClientApi.Pages.UpdatePartPage"
+             Title="UpdatePartPage">
+    
     <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,*,*" ColumnSpacing="5">
         <TableView Intent="Data" Grid.Row="0" Grid.ColumnSpan="3">
             <TableRoot>
                 <TableSection Title="Part Info">
+                    <EntryCell Label="Part ID"  x:Name ="part_id" IsEnabled="False" />
                     <EntryCell Label="Part Name"  x:Name="partName"/>
                     <EntryCell Label="Part Type"  x:Name="partType"/>
                     <EntryCell Label="Supplier"  x:Name="partSupplier"/>
@@ -14,10 +16,8 @@
             </TableRoot>
         </TableView>
 
-        <Button Text="Add Part" 
-                Grid.Row="1" 
-                Grid.ColumnSpan="3"  
-                Margin="20,0"
-                Clicked="AddNewPart_Clicked"/>
+        <Button Text="Save" Grid.Row="1" Grid.Column="0"  Margin="10" Clicked="SaveButton_Clicked"/>
+        <Button Text="Delete" Grid.Row="1" Grid.Column="1" Margin="10" Clicked="DeleteButton_Clicked"/>
+        <Button Text="Cancel" Grid.Row="1" Grid.Column="2"  Margin="10" Clicked="CancelButton_Clicked"/>
     </Grid>
 </ContentPage>

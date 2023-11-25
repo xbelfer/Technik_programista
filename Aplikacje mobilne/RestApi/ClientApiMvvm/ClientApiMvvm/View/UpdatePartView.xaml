@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ClientApiMvvm.ViewModel"
+             x:Class="ClientApiMvvm.View.UpdatePartView"
+             x:DataType="vm:UpdatePartViewModel"
+             Title="UpdatePartView"
+             >
+    
+    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,*,*" ColumnSpacing="5">
+        <TableView Intent="Data" Grid.Row="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection Title="Part Info">
+                    <EntryCell Label="Part ID"  Text="{Binding PartId}" IsEnabled="False" />
+                    <EntryCell Label="Part Name"  Text="{Binding PartName}"/>
+                    <EntryCell Label="Part Type"  Text="{Binding PartType}"/>
+                    <EntryCell Label="Supplier"  Text="{Binding PartSupplier}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text="Save" Grid.Row="1" Grid.Column="0"  Margin="10" Command="{Binding SaveCommand}"/>
+        <Button Text="Delete" Grid.Row="1" Grid.Column="1" Margin="10" Command="{Binding DeleteCommand}"/>
+        <Button Text="Cancel" Grid.Row="1" Grid.Column="2"  Margin="10" Command="{Binding CancelCommand}"/>
+    </Grid>
+</ContentPage>
