@@ -57,8 +57,9 @@ namespace StudentFirstExample.ViewModels
             set { outTxt = value; OnPropertyChanged(nameof(OutTxt)); }
         }
 
-        
+
         public Command ZapiszDaneCommand { get; set; }
+
 
         private void ZapiszDane(object o)
         {
