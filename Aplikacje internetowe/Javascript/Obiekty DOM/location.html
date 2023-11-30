@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        p1.innerHTML = "<br>The full URL:" + window.location.href;
+        p1.innerHTML +="<br>Hostname is: " + window.location.hostname;
+        p1.innerHTML += "<br>Page path is: " + window.location.pathname;
+        p1.innerHTML += "<br>Page protocol is: " + window.location.protocol;
+        p1.innerHTML += "<br>Port number is: " + window.location.port;
+    </script>
+</body>
+</html>

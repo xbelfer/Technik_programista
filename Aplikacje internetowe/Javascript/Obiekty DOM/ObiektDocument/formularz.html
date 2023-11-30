@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" action = "skrypt.php" method="POST">
+        <p>Imie: <input type="text" name="imie" value = "Jan"/></p>
+        <p>Nazwisko: <input type="text" name="nazwisko" value = "Kowalski"/></p>
+        <p>Wiek: <input type="number" name="wiek" value = "18"/></p>
+        <input type="submit" value="Wyślij" />
+    </form>
+
+    <form name="form2" action = "skrypt2.php" method="POST">
+        <p>Marka: <input type="text" name="marka" value = "Opel"/></p>
+        <p>Model: <input type="text" name="model" value = "Astra"/></p>
+        <p>Rocznik: <input type="number" name="rocznik" value = "2022"/></p>
+        <input type="submit" value="Wyślij" />
+    </form>
+
+    <p id = "p1"></p>
+
+    <script>
+
+        let p1 = document.getElementById("p1");
+
+        p1.innerHTML="Spoby odwołania do elementów formularza:";
+        //indeksując tablicę formularzy i elementów wartościami liczbowymi
+        p1.innerHTML += "<br>Imie: "+document.forms[0].elements[0].value;
+        //indeksując tablicę formularzy i elementów ciągami znakowymi będącymi wartościamy name
+        p1.innerHTML += "<br>Nazwisko: "+document.forms['form1'].elements['nazwisko'].value;
+        // odwołując się do wartości name formularza i elementu formularza
+        p1.innerHTML += "<br>Wiek: "+document.form1.wiek.value;
+
+        //indeksując tablicę formularzy i elementów wartościami liczbowymi
+        p1.innerHTML += "<br>Marka: "+document.forms[1].elements[0].value;
+        //indeksując tablicę formularzy i elementów ciągami znakowymi będącymi wartościamy name
+        p1.innerHTML += "<br>Model: "+document.forms['form2'].elements['model'].value;
+        // odwołując się do wartości name formularza i elementu formularza
+        p1.innerHTML += "<br>Rocznik: "+document.form2.rocznik.value;
+
+    </script>
+</body>
+</html>

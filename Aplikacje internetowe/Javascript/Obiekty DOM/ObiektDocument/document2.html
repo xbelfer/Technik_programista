@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "nag1">Przykładowy paragraf</h1>
+    <h1>Paragraf 2</h1>
+    <h1 class="par">Paragraf 3</h1>
+    <h1>Paragraf 4</h1>
+    <h1 class="par">Paragraf 5</h1>
+    <h3 class="par">To jest h3 o klasie par</h3>
+
+    <p id = "debug" ></p>
+
+    <script>
+        let db = document.querySelector("#debug");
+
+        db.innerHTML = "Pobieranie elementu po id:";
+        let naglowek = document.querySelector("#nag1");
+        db.innerHTML += "<br>"+naglowek.innerHTML;
+        let naglowki = document.querySelectorAll("h1");
+
+        for(let i = 0; i < naglowki.length; i++)
+        {
+            db.innerHTML += "<br>naglowki["+i+"]= "+naglowki[i].innerHTML;
+        }
+
+        db.innerHTML += "<br>Pobieranie elementów po nazwie klasy:";
+        let nagClass = document.querySelectorAll(".par");
+        for(let i = 0; i < nagClass.length; i++)
+        {
+            db.innerHTML += "<br>nagClass["+i+"]= "+nagClass[i].innerHTML;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick = "OpenWindow()">Otwórz nowe okno</button>
+    <button onclick = "CloseWindow()">Zamknij okno</button>
+    <script>
+        document.getElementById("demo").innerHTML =
+        "Szerokość okna: " + window.innerWidth + "px<br>" +
+        "Wysokość okna: " + window.innerHeight + "px";
+
+        let myWindow;
+        function OpenWindow()
+        {
+            myWindow = window.open("", "MsgWindow", "width=200,height=100");
+            myWindow.document.write("<p>Nowe okno</p>");
+        }
+        function CloseWindow()
+        {
+            myWindow.close();
+        }
+    </script>
+</body>
+</html>

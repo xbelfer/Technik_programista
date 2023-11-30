@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1">0</p>
+    <button onclick = "Start()">Start</button>
+    <button onclick = "Stop()">Stop</button>
+    <button onclick = "Reset()">Reset</button>
+
+    <script>
+        let run = true;
+        let p1 = document.getElementById("p1");
+        
+        function Start()
+        {
+                setTimeout(function(){
+                    
+                    let x = parseInt(p1.innerHTML);
+                    ++x;
+                    p1.innerHTML = x;
+                    Start();
+                },1000);
+        }
+        function Stop()
+        {
+            clearTimeout();
+        }
+        function Reset()
+        {
+            clearTimeout();
+            p1.innerHTML = 0;
+        }
+
+
+    </script>
+</body>
+</html>

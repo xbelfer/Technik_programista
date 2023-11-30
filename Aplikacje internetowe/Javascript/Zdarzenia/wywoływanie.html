@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "p1">Kliknij na przycisk</p>
+    <!-- Przypisanie funkcji obsługującej zdarzenie do atrybutu znacznika-->
+    <button onclick = "zmianaTextu()">Zmiana zawartości pargrafu</button>
+    <button id = "btColor">Zmiana koloru</button>
+    <button id = "btSize">Zmiana rozmiaru czcionki</button>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        // sposób 1
+        function zmianaTextu()
+        {
+            p1.innerHTML = "Tekst w paragrafie po kliknięciu";
+        }
+        //sposób 2
+        let btColor = document.getElementById("btColor");
+        btColor.onclick = function(){
+            p1.style.color = "red";
+        }
+        //sposób 3
+
+        let btSize = document.getElementById("btSize");
+        btSize.addEventListener("click",function(){
+            p1.style.fontSize = "32px";
+        });
+
+
+
+
+    </script>
+</body>
+</html>

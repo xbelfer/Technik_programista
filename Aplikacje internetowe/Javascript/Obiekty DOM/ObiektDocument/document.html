@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekt document</title>
+</head>
+<body bgcolor="yellow">
+    <p id="p1"></p>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        p1.innerHTML = "<br>Document URL:" + document.URL;
+        p1.innerHTML +="<br>title: " + document.title;
+        p1.innerHTML += "<br>Ostatnia modyfikacja: " + document.lastModified;
+        p1.innerHTML += "<br>Tło dokumentu: " + document.bgColor;
+        p1.innerHTML += "<br>Kolor pierwszego planu: " + document.fgColor;
+        p1.innerHTML += "<br>Kolor łącza w dokumencie: " + document.linkColor;
+        p1.innerHTML += "<br>Cisateczka w dokumencie: " + document.cookie;
+    </script>
+</body>
+</html>
