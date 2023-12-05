@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Przesuwanie prostokąta klawiszami strzałek</h1>
+    <p id="debug"></p>
+    <div  id="d1">
+    </div>
+
+    <script>
+        let p1 = document.getElementById("debug");
+        let d1 = document.getElementById("d1");
+        let x = 50;
+        let y = 100;
+        document.querySelector("body").onkeydown = function(event){
+            let key = event.key;
+
+            if(key == "ArrowUp")
+            {
+                y -= 10;
+                d1.style.top = y+"px";
+            }
+            else if(key == "ArrowDown")
+            {
+                y += 10;
+                d1.style.top = y+"px";
+            }
+            else if(key == "ArrowLeft")
+            {
+                x -= 10;
+                d1.style.left = x+"px";
+            }
+            else if(key == "ArrowRight")
+            {
+                x += 10;
+                d1.style.left = x+"px";
+            }
+            else
+            {
+                p1.innerHTML = "Sterujemy strzałkami !!!";
+            }
+        }
+
+    </script>
+</body>
+</html>

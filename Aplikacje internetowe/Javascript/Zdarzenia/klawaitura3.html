@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onkeydown="f1(event)">
+    <h1>Test klawiatury, naciśnij klawisz</h1>
+    <p id="debug"></p>
+
+    <script>
+        let p1 = document.getElementById("debug");
+
+        function f1(event){
+            p1.innerHTML = "Nacisnąłeś: "+event.key;
+        }
+    </script>
+</body>
+</html>

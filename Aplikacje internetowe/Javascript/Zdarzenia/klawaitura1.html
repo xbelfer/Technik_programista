@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="f1(event)" />
+    <p id="p1"></p>
+
+    <script>
+        let p1 = document.getElementById("p1");
+        function f1(event)
+        {
+            p1.innerHTML = "key:  "+event.key;
+            p1.innerHTML += "<br>charCode:  "+event.charCode; // deprecated
+            p1.innerHTML += "<br>keyCode:  "+event.keyCode; // deprecated
+            p1.innerHTML += "<br>code:  "+event.code;
+        }
+    </script>
+</body>
+</html>
