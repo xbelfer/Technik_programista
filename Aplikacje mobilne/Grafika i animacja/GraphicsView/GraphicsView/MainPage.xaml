@@ -16,9 +16,12 @@
             Spacing="25">
 
             <Label
+                x:Name="lbElipse"
                 Text="Elipsa"
                 Style="{StaticResource Headline}"/>
-            <GraphicsView Drawable="{StaticResource elipse}"
+            <GraphicsView
+                            StartInteraction="ClickElipse"
+                            Drawable="{StaticResource elipse}"
                           HeightRequest="100"
                           WidthRequest="150"/>
 
