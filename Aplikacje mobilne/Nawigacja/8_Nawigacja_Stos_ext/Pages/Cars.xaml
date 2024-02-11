@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_8_Nawigacja_Stos.Pages.Cars"
+             Title="Cars">
+    <VerticalStackLayout>
+        <Label 
+            Text="List of Cars"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <CollectionView x:Name="cvCars" Margin="10" SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged_cvCars">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,5,0,5" Padding="10">
+                        <HorizontalStackLayout Spacing="10">
+                            <VerticalStackLayout Spacing="10" WidthRequest="100">
+                                <Label Text="{Binding Brand}" />
+                                <Label Text="{Binding Model}" />
+                                <Label Text="{Binding Price}" />
+                            </VerticalStackLayout>
+                            <Image Source="{Binding Image}" HeightRequest="80"/>
+                        </HorizontalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

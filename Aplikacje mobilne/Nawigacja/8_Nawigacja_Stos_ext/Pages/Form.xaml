@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_8_Nawigacja_Stos.Pages.Form"
+             Title="Form">
+    <VerticalStackLayout Spacing="10" Margin="20">
+        <Label 
+            Text="Dodaj nowy samochód"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="entryId" Placeholder="Wpisz Id"/>
+        <Entry x:Name="entryBrand" Placeholder="Wpisz markę"/>
+        <Entry x:Name="entryModel" Placeholder="Wpisz model"/>
+        <Entry x:Name="entryColor" Placeholder="Wpisz kolor"/>
+        <Entry x:Name="entryYear" Placeholder="Wpisz rocznik"/>
+        <Entry x:Name="entryMileage" Placeholder="Wpisz przebieg"/>
+        <Entry x:Name="entryPrice" Placeholder="Wpisz cenę"/>
+        <Entry x:Name="entryImage" Placeholder="Wklej link do zdjęcia"/>
+        <Button Text="Zapisz" Clicked="OnBtnClicked_AddNewCar"/>
+
+    </VerticalStackLayout>
+</ContentPage>

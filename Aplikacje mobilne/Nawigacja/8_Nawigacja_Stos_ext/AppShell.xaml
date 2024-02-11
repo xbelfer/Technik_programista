@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_8_Nawigacja_Stos.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_8_Nawigacja_Stos.Pages">
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+            <Image Source="main.png"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Parent" Icon="dotnet_bot.png">
+        <ShellContent Title="Main" Icon="main.png"
+            ContentTemplate="{DataTemplate local:Main}"/>
+        <ShellContent Title="Galery" Icon="galeria.png"
+            ContentTemplate="{DataTemplate local:Galery}"/>
+        <ShellContent Title="Cars" Icon="Cars.png"
+            ContentTemplate="{DataTemplate local:Cars}"/>
+        <ShellContent Title="Form" Icon="Cars.png"
+            ContentTemplate="{DataTemplate local:Form}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="galery.png">
+        <ShellContent 
+            ContentTemplate="{DataTemplate local:About}"/>
+    </FlyoutItem>
+
+</Shell>

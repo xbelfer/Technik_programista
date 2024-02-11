@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="_3_Notatki_Grid_ListView.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:_3_Notatki_Grid_ListView.WinUI">
+
+</maui:MauiWinUIApplication>

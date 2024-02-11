@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_8_Nawigacja_Stos.Pages.CarDetails"
+             Title="Car">
+    <VerticalStackLayout             
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+        <Image x:Name="photoCar" HeightRequest="200"/>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Marka: " WidthRequest="100" FontSize="24"/>
+            <Label x:Name="lbMarka" FontSize="24"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Model: " WidthRequest="100" FontSize="24"/>
+            <Label x:Name="lbModel" FontSize="24"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

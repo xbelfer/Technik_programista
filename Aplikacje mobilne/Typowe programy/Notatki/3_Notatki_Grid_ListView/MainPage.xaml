@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_3_Notatki_Grid_ListView.MainPage"
+             x:Name="root">
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Notatki" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center" 
+                   TextColor="White"
+                   Padding="5"
+                   FontSize="16"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid   ColumnDefinitions="*,Auto"
+            RowDefinitions="Auto,Auto,*"
+            Margin="10"
+            RowSpacing="10"
+            ColumnSpacing="5"
+            >
+        <Label Text="Aplikacja notatki"
+               FontSize="20"
+               BackgroundColor="Green"
+               TextColor="White"
+               Padding="10"
+               Grid.ColumnSpan="2"/>
+
+        <Entry  x:Name="inp"
+                Placeholder="Wpisz notatkę"
+                Margin="0,0,2,0"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+        <Button Text="Dodaj"
+                BackgroundColor="red"
+                TextColor="white"
+                Clicked="DodajNotatke_Cliked"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+    </Grid>
+
+</ContentPage>
