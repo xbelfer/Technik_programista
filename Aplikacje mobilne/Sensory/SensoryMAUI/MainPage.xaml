@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SensoryMAUI.MainPage"
+             Title="Stan urządzenia i sensory"
+             Loaded="ContentPage_Loaded">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="10"
+            VerticalOptions="Start"
+            HorizontalOptions="Start">
+
+            <Label
+                x:Name="lbDevice"
+                TextColor="Navy"/>
+            <Label
+                x:Name="lbScreen" />
+            
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Switch IsToggled="False"
+                            Toggled="batterySwitch_Toggled"
+                            OnColor="Lime"
+                            ThumbColor="Green"
+                            VerticalOptions="Center"/>
+                    <Label Text="Obserwuj zmiany baterii"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label x:Name="lbStateOfBattery" />
+                <Label x:Name="lbLevelOfBattery" />
+                <ProgressBar x:Name="pbBaterryLevel" 
+                             ProgressColor="Green"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Switch IsToggled="False"
+                            Toggled="accelerometrSwitch_Toggled"
+                            OnColor="Red"
+                            ThumbColor="DarkRed"
+                            VerticalOptions="Center"/>
+                    <Label Text="Obserwuj przyśpieszenie"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label x:Name="lbAkcelerometr" Text="---" />
+                <ProgressBar x:Name="pbPrzyspieszenie" 
+                             ProgressColor="DarkRed"/>
+                <Label x:Name="lbPotrzasanie" Text="---" TextColor="DarkRed"/>
+                <Button Text="Włącz/wyłącz latarkę" 
+                        Margin="0,10,0,0"
+                        Clicked="flashLightButton_Clicked"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Switch IsToggled="False"
+                            Toggled="barometrSwitch_Toggled"
+                            OnColor="Blue"
+                            ThumbColor="Navy"
+                            VerticalOptions="Center"/>
+                    <Label Text="Obserwuj ciśnienie"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label x:Name="lbBarometr" />
+                <ProgressBar x:Name="pbCisnienie" 
+                             ProgressColor="Navy"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Switch IsToggled="False"
+                            Toggled="compasSwitch_Toggled"
+                            OnColor="Magenta"
+                            ThumbColor="Purple"
+                            VerticalOptions="Center"/>
+                    <Label Text="Obserwuj kompas"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label x:Name="lbKompas" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Switch IsToggled="False"
+                            Toggled="orientacjaSwitch_Toggled"
+                            OnColor="Yellow"
+                            ThumbColor="Olive"
+                            VerticalOptions="Center"/>
+                    <Label Text="Obserwuj zmianę orientacji"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label x:Name="lbOrientacja" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
