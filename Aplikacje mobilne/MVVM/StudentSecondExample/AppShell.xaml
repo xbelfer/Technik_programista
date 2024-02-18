@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="StudentSecondExample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StudentSecondExample"
+    xmlns:view ="clr-namespace:StudentSecondExample.Views"
+    Title="Lista studentów"
+    Background="Blue">
+
+    <TabBar >
+        <Tab Title="Lista" Icon="lista.png">
+            <ShellContent ContentTemplate="{DataTemplate view:StudentListView}" />
+        </Tab>
+        <Tab Title="Dodaj" Icon="dodaj.png">
+            <ShellContent ContentTemplate="{DataTemplate view:StudentView}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

@@ -12,7 +12,7 @@
         </Grid>
     </Shell.FlyoutHeader>
     
-    <FlyoutItem Title="Main" Icon="main.png">
+    <FlyoutItem Title="Main" Icon="home.svg">
         <ShellContent 
             ContentTemplate="{DataTemplate local:MainPage}"/>
     </FlyoutItem>

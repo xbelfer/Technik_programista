@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm ="clr-namespace:StudentFirstExample.ViewModels"
-             x:Class="StudentFirstExample.Views.StudentView"
-             Title="StudentView">
-
-    <ContentPage.BindingContext>
-        <vm:StudentViewModel />
-    </ContentPage.BindingContext>
-
-
+             xmlns:vm ="clr-namespace:StudentSecondExample.ViewModels"
+             x:Class="StudentSecondExample.Views.StudentView"
+             Title="Formularz dodawania nowego studenta"
+             x:DataType="vm:StudentViewModel">
+    
     <VerticalStackLayout
         Margin="10"
         Spacing="10">
-        <Entry Text ="{Binding Imie, Mode=TwoWay}" Placeholder="Imie" />
+        <Entry Text ="{Binding Imie}" Placeholder="Imie" />
         <Entry Text ="{Binding Nazwisko}" Placeholder="Nazwisko" />
         <Entry Text ="{Binding Klasa}" Placeholder="Klasa" />
         <Entry Text ="{Binding Srednia}" Placeholder="Średnia"/>

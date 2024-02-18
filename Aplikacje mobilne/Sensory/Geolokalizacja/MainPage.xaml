@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Geolokalizacja.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                x:Name="lbPolozenie" Text="---" TextColor="Black" />
+            <Button x:Name="btnOdswiezPolozenie" Text="Pobierz lokalizację"
+                    Clicked="locationButton_Clicked" Margin="0,10,0,0"/>
+            <Button x:Name="btnOtworzMape" Text="Otwórz mapę" Margin="0,10,0,0"
+                    Clicked="mapButton_Clicked" IsEnabled="False"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
