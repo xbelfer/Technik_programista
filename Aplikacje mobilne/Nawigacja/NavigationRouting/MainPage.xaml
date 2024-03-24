@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationRouting.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                x:Name="zd1">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        Tapped="CarDetailPage_ButtonCliced"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Button 
+                Text="Detail Page"
+                Clicked="DetailPage_ButtonCliced"/>
+            <Button 
+                Text="Parameter Detail Page"
+                Clicked="ParameterDetailPage_ButtonCliced"/>
+            <Button 
+                Text="Car Detail Page"
+                Clicked="CarDetailPage_ButtonCliced"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -12,7 +12,6 @@ public partial class MainPage : ContentPage
 		tasks.Add("Zmywanie");
 		tasks.Add("Gotowanie");
 		cv.ItemsSource = tasks;
-		tasks
 
 	}
 

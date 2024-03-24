@@ -21,7 +21,7 @@
                  Stroke="Red"
                  StrokeThickness="8"
                  WidthRequest="150"
-                 HeightRequest="50"
+                 HeightRequest="150"
                  HorizontalOptions="Start" />
 
             <Label Text="Ścieżka"/>
