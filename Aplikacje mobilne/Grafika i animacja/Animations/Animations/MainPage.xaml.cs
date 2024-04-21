@@ -43,6 +43,21 @@
 			await Task.Delay(1000);
 			CounterBtn.Rotation = 0;
 		}
-    }
+
+		private async void Image_Tapped(object sender, TappedEventArgs e)
+		{
+			await tappImg.RotateTo(tappImg.Rotation+90, 500, Easing.Linear);
+		}
+
+		private void Frame_PanUpdated(object sender, PanUpdatedEventArgs e)
+		{
+			if (e.StatusType == GestureStatus.Running)
+			{
+				panImg.TranslationX += e.TotalX;
+				panImg.TranslationY += e.TotalY;
+			}
+
+		}
+	}
 
 }

@@ -10,7 +10,7 @@
             Spacing="25">
             <Image
                 Source="dotnet_bot.png"
-                HeightRequest="185"
+                HeightRequest="150"
                 Aspect="AspectFit"
                 x:Name="image" />
 
@@ -19,6 +19,28 @@
                 Text="Click me" 
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="150"
+                Aspect="AspectFit"
+                x:Name="tappImg">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="Image_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Frame HeightRequest="300"
+                   BorderColor="Blue">
+                <Frame.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="Frame_PanUpdated"/>
+                </Frame.GestureRecognizers>
+                <Image           
+                    x:Name="panImg"
+                    Source="dotnet_bot.png"
+                    HeightRequest="100"
+                    Aspect="AspectFit"/>
+
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 
