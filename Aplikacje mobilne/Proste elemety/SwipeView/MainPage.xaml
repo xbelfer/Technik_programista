@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeView.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <HorizontalStackLayout>
+                <Label Text="Zadanie:"/>
+                <Editor x:Name="newTask" WidthRequest="200" Margin="10"/>
+                <Button Clicked="AddTask_ButtonCliked" Text="Dodaj" Margin="10" Padding="10"/>
+            </HorizontalStackLayout>
+            <CollectionView x:Name="cvTasks">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Delete"
+                                       BackgroundColor="Red"
+                                               Invoked="Delete_Invoked"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Frame BorderColor="blue" Margin="5">
+                                <Grid>
+                                    <Label Text="{Binding .}"/>
+                                </Grid>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

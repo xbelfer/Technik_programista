@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwipeView", "SwipeView.csproj", "{DCAD1E26-A779-47B6-A2ED-9E11A2404768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAD1E26-A779-47B6-A2ED-9E11A2404768}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7A08B31-30BA-4B73-B602-F24C988F91DC}
+	EndGlobalSection
+EndGlobal
