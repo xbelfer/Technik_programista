@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SyntezaMowy.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <Editor x:Name="edText"
+                    Text="Syntezator mowy"/>
+            <ListView x:Name="lvGlosy" ItemSelected="lvGlosy_ItemSelected"/>
+            <Label Text="Głośność" />
+            <Slider x:Name="sGlosnosc" Minimum="0" Maximum="1" Value="0.75"/>
+            <Label Text="Ton głosu"/>
+            <Slider x:Name="sTon" Minimum="0" Maximum="2" Value="1"/>
+            <Button x:Name="btnCzytaj" Text="Czytaj"
+                    IsEnabled="False" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
