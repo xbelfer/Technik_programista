@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavigationRouting.Pages.CarDetailPage"
-             Title="CarDetailPage">
+             Title="CarDetailPage"
+             Shell.BackgroundColor="Blue"
+             Shell.TitleColor="White"
+             xmlns:pages="clr-namespace:NavigationRouting.Pages"
+             x:DataType="pages:CarDetailPage">
     <VerticalStackLayout>
         <Label 
             Text="{Binding CarDetail.Marka}"
@@ -20,5 +24,6 @@
             Text="{Binding CarDetail.Przebieg}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Image Source="{Binding CarDetail.Img}" HeightRequest="150"/>
     </VerticalStackLayout>
 </ContentPage>

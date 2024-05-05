@@ -12,13 +12,15 @@ namespace NavigationRouting.Model
 		public string Model { get; set; }
 		public int Przebieg {  get; set; }
 		public int Cena { get; set; }
+		public string Img { get; set; }
 
-		public Car(string marka, string model, int przebieg, int cena)
+		public Car(string marka, string model, int przebieg, int cena, string img)
 		{
 			Marka = marka;
 			Model = model;
 			Przebieg = przebieg;
 			Cena = cena;
+			Img = img;
 		}
 	}
 }

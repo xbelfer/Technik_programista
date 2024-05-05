@@ -18,17 +18,17 @@ namespace CyklZycia1
 
 			window.Created += (s,e) => 
 			{
-				Debug.WriteLine("1. Zarzenie Created");
+				Debug.WriteLine("1. Zdarzenie Created");
 			};
 
 			window.Activated += (s, e) =>
 			{
-				Debug.WriteLine("2. Zarzenie Activated");
+				Debug.WriteLine("2. Zdarzenie Activated");
 			};
 
 			window.Deactivated += (s, e) =>
 			{
-				Debug.WriteLine("3. Zarzenie Deactivated");
+				Debug.WriteLine("3. Zdarzenie Deactivated");
 			};
 
 			window.Stopped += (s, e) =>
@@ -38,12 +38,12 @@ namespace CyklZycia1
 
 			window.Resumed += (s, e) =>
 			{
-				Debug.WriteLine("5. Zarzenie Reasumed");
+				Debug.WriteLine("5. Zdarzenie Reasumed");
 			};
 
 			window.Destroying += (s, e) =>
 			{
-				Debug.WriteLine("6. Zarzenie Destroying");
+				Debug.WriteLine("6. Zdarzenie Destroying");
 			};
 
 

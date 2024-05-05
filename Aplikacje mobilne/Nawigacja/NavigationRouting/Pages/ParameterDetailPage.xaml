@@ -2,12 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavigationRouting.Pages.ParameterDetailPage"
-             Title="ParameterDetailPage">
-    <VerticalStackLayout>
-        <Label 
+             Title="ParameterDetailPage"
+             Shell.BackgroundColor="Blue"
+             Shell.TitleColor="White"
+             xmlns:pages="clr-namespace:NavigationRouting.Pages"
+             x:DataType="pages:ParameterDetailPage">
+    <VerticalStackLayout Margin="10">
+        <HorizontalStackLayout  Spacing="5">
+            <Label 
             Text="Prameter Detail Page:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label Text="{Binding Param}" />
+            <Label Text="{Binding Param}" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

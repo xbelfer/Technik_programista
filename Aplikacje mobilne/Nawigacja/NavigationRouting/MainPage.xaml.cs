@@ -28,7 +28,7 @@ namespace NavigationRouting
 				
 			}
 
-			Car car = new Car("Opel", "Astra", 120000, 16000);
+			Car car = new Car("Opel", "Astra", 120000, 16000, "https://www.bankier.pl/moto/wp-content/uploads/2018/12/lambo-1056x594.jpg");
 			var navParameter = new Dictionary<string, object> 
 			{
 				{"Car",car }

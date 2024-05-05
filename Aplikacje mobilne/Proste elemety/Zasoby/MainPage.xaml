@@ -30,13 +30,20 @@
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-            <Image BackgroundColor="red">
+                HorizontalOptions="Fill">
+                <Button.ImageSource>
+                    <FontImageSource 
+                        Glyph="{x:Static app:FontAwesomeSolid.SquarePlus}"
+                        FontFamily="FontAwesomeSolid"
+                        Size="32"/>
+                </Button.ImageSource>
+            </Button>
+            <Image BackgroundColor="red" HeightRequest="100">
                 <Image.Source>
                     <FontImageSource 
-                        Glyph="{x:Static app:FontAwesomeSolid.CirclePlay}"
-                        FontFamily="FontAwesomeRegular"
-                        Size="62"/>
+                        Glyph="{x:Static app:FontAwesomeSolid.HeartCircleMinus}"
+                        FontFamily="FontAwesomeSolid"
+                        Size="32"/>
                 </Image.Source>
             </Image>
         </VerticalStackLayout>
