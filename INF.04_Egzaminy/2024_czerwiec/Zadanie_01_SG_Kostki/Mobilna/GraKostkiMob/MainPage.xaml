@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GraKostkiMob.MainPage"
+             Shell.BackgroundColor="Blue"
+             Shell.TitleColor="White"
+             BackgroundColor="Beige">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="20">
+            <Label Text="Gra w kości. Autor 00000000000" 
+                   Background="Brown" 
+                   TextColor="White"
+                   FontSize="24"
+                   Padding="10"
+                   Margin="0,10"/>
+            <Button Text="RZUĆ KOŚĆMI"
+                    Clicked="RzutKosciami_ButtonClicked"
+                    BackgroundColor="Chocolate"
+                    WidthRequest="150"/>
+            <HorizontalStackLayout BackgroundColor="White" >
+                <Image x:Name="kostka1" Source="question.jpg" 
+                       HeightRequest="60" Margin="9"/>
+                <Image x:Name="kostka2" Source="question.jpg" 
+                       HeightRequest="60" Margin="9"/>
+                <Image x:Name="kostka3" Source="question.jpg" 
+                       HeightRequest="60" Margin="9"/>
+                <Image x:Name="kostka4" Source="question.jpg" 
+                       HeightRequest="60" Margin="9"/>
+                <Image x:Name="kostka5" Source="question.jpg" 
+                       HeightRequest="60" Margin="9"/>
+            </HorizontalStackLayout>
+            <Label Text="Wynik tego losowania:"
+                   x:Name="lbPojedynczeLosowanie"
+                   HorizontalTextAlignment="Center"/>
+            <Label Text="Wynnik gry:"
+                   x:Name="lbWynikGry"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="RESETUJ WYNIK" 
+                    Clicked="ResetujWynik_ButtonClicked"
+                    BackgroundColor="Chocolate"
+                    WidthRequest="150"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WlasciwosciCzcionki.MainPage"
+             Shell.NavBarIsVisible="False">
+
+        <VerticalStackLayout
+            Margin = "20"
+            Spacing="25">
+            <Label Text="Właściwości czcionki"
+                   BackgroundColor="#558B2F"
+                   TextColor="White"
+                   FontSize="24"
+                   FontAttributes="Bold"/>
+            <Label Text="Rozmiar:" x:Name="lbRozmiar" FontSize="16"/>
+            <Slider x:Name ="sliderRozmiar" 
+                    ValueChanged="SliderRozmiar_ValueChanged"
+                    Maximum="40"/>
+            <Label x:Name="lbCytat" Text="Dzień dobry" FontSize="16"/>
+            <Button Text=">>" 
+                    Clicked="ZmianaCytatu_ButtonClicked"
+                    BackgroundColor="#558B2F"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    FontSize="24"
+                    Padding="30,10"
+                    />
+        </VerticalStackLayout>
+
+</ContentPage>

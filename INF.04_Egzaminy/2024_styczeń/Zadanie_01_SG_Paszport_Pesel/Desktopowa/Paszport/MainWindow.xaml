@@ -1,0 +1,110 @@
+﻿<Window x:Class="Paszport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Paszport"
+        mc:Ignorable="d"
+        Title="Wprowadzenie danych do paszportu. Wykonał: 12345678912" 
+        Height="400" Width="800"
+        Background="CadetBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Margin="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Numer" 
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"/>
+            <TextBox 
+                   x:Name="tbNumer"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                    Margin="7"
+                    Padding="3"
+                    Background="Azure" 
+                    LostFocus="TextBox_LostFocus"/>
+            <Label Content="Imię" 
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"/>
+            <TextBox 
+                   x:Name="tbImie"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                    Margin="7"
+                   Padding="3"
+                   Background="Azure"/>
+            <Label Content="Nazwisko" 
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"/>
+            <TextBox 
+                   x:Name="tbNazwisko"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="7"
+                   Padding="3"
+                   Background="Azure"/>
+            <GroupBox Header="Kolor oczu"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="10"     
+                >
+                <StackPanel>
+                    <RadioButton x:Name ="rbNiebieskie" GroupName="kolorOczu" Margin="10" IsChecked="True">niebieskie</RadioButton>
+                    <RadioButton x:Name ="rbZielone" GroupName="kolorOczu" Margin="10">zielone</RadioButton>
+                    <RadioButton x:Name ="rbPiwne" GroupName="kolorOczu" Margin="10">piwne</RadioButton>
+                </StackPanel>
+                
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image
+                x:Name="imgZdjecie"
+                Height="180"
+                Margin="20,40" Source="img/000-zdjecie.jpg"/>
+            <Image
+                x:Name="imgOdcisk"
+                Grid.Column="1"
+                Height="180"
+                Margin="20"
+                Source="img/000-odcisk.jpg"/>
+            <Button 
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Content="OK"
+                FontSize="18"
+                Padding="10"
+                Margin="40,0,40,20"
+                Background="Azure" Click="Button_Click"/>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="FormularzPracownika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormularzPracownika"
+        mc:Ignorable="d"
+        Title="Dodaj pracownika" 
+        Background="LightSteelBlue"
+        Height="350" Width="650">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Dane pracownika"
+                      Margin="20">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Imię" Width="80" Margin="10"/>
+                        <TextBox x:Name="tbImie" Width="150" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nazwisko" Width="80" Margin="10"/>
+                        <TextBox x:Name="tbNazwisko" Width="150" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Stanowisko" Width="80" Margin="10"/>
+                        <ComboBox x:Name="comboStanowisko"
+                                  Width="150" Margin="10">
+                            <ComboBoxItem>Kierownik</ComboBoxItem>
+                            <ComboBoxItem Content="Starszy programista"/>
+                            <ComboBoxItem Content="Młodszy programista"/>
+                            <ComboBoxItem Content="Tester"/>
+                        </ComboBox>
+
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Generowanie hasła"
+                      Margin="20">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Ile znaków? " Margin="10" Width="80"/>
+                        <TextBox x:Name="tbIleZnakow" Margin="10" Width="150"/>
+                    </StackPanel>
+                    <CheckBox x:Name="cbMaleWielkieLitery" Content="Małe i wielkie litery" 
+                              IsChecked="True"
+                              Margin="10"/>
+                    <CheckBox x:Name="cbCyfry" Content="Cyfry" Margin="10"/>
+                    <CheckBox x:Name="cbZnakiSpecjalne" Content="Znaki specjalne" Margin="10"/>
+                    <Button Content="Generuj hasło"
+                            Click="GenerujHaslo_ButtonClicked"
+                            Margin="10"
+                            Width="80"
+                            Background="SteelBlue"/>
+                </StackPanel>
+                
+            </GroupBox>
+        </StackPanel>
+        <Button Content="Zatwierdź"
+                Click="Zatwierdz_ButtonClicked"
+                Width="300"
+                Padding="10"
+                Margin="10"
+                Background="SteelBlue"/>
+    </StackPanel>
+</Window>

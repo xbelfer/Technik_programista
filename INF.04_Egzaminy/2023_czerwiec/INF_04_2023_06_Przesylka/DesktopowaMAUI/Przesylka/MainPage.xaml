@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Przesylka.MainPage"
+             HeightRequest="500" WidthRequest="600">
+
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Rodzaj przesyłki"/>
+                        <Line X1="0" X2="200" Stroke="black"/>
+                        <RadioButton Content="Pocztówka"
+                                 x:Name="rbPocztowka"
+                                 IsChecked="True"
+                                 Margin="10"/>
+                        <RadioButton Content="List"
+                                 x:Name="rbList"
+                                 Margin="10"/>
+                        <RadioButton Content="Paczka"
+                                 x:Name="rbPaczka"
+                                 Margin="10"/>
+                    </StackLayout>
+                </Frame>
+                <Button Clicked="SprawdzCene_ButtonClicked"
+                    Text="Sprawdź Cenę"
+                    Margin="0,10"
+                    Padding="5"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="pocztowka.png"
+                       x:Name="imgObrazPrzesylki"/>
+                    <Label Text="Cena: "
+                       x:Name="lbCenaPrzesylki"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       WidthRequest="100"
+                       Margin="10,0"/>
+                </StackLayout>
+            </StackLayout>
+            <Frame  Margin="40,0">
+                <StackLayout>
+                    <Label Text="Dane adresowe"/>
+                    <Line X1="0" X2="200" Stroke="black"/>
+                    <Label Text="Ulica z numerem"
+                       Margin="10"/>
+                    <Entry x:Name="tbUlicaNumer"
+                         WidthRequest="200"
+                         Margin="10,0"/>
+                    <Label Text="Kod pocztowy"
+                       Margin="10"/>
+                    <Entry x:Name="tbKodPocztowy"
+                         WidthRequest="150"
+                         Margin="10,0"
+                         HorizontalOptions="Start"/>
+                    <Label Text="Miasto"
+                       Margin="10"/>
+                    <Entry x:Name="tbMiasto"
+                         WidthRequest="200"
+                         Margin="10,0"/>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <Button Clicked="Zatwierdz_ButtonClicked"
+            Text="Zatwierdź"
+            Padding="5"
+            Margin="0,10,0,0"/>
+    </StackLayout>
+
+</ContentPage>

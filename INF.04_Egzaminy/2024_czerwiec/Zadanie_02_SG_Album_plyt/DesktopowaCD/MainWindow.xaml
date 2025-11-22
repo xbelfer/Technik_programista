@@ -1,0 +1,42 @@
+﻿<Window x:Class="Egzamin_inf04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Egzamin_inf04"
+        mc:Ignorable="d"
+        Title="MojeDźwięki, Wykonał:000000000000" Height="360" Width="1100"
+        Background="#2E8B57">
+    <StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="20"
+                    Height="70"
+                    Click="LeftArrow_Clicked2">
+                <Image Source="Resources/obraz3.png"/>
+            </Button>
+            <Image Source="Resources/obraz.png"
+                   Width="200" Height="220"
+                   Margin="20"/>
+            <StackPanel Width="560">
+                <Label x:Name="lbArtist" Margin="5" FontSize="50" Foreground="White"/>
+                <Label x:Name="lbAlbum" Margin="5" FontSize="30" Foreground="White" FontStyle="Italic"/>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label x:Name="lbNumber" Margin="5" FontSize="20" Foreground="Green"/>
+                    <Label x:Name="lbYear" Margin="5" FontSize="20" Foreground="Green"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Margin="20"
+                    Height="70"
+                    Click="RightArrow_Clicked2">
+                <Image Source="Resources/obraz2.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="lbNumDownload" Margin="150 10 50 10" FontSize="20" Foreground="Green" />
+            <Button Content="Pobierz" Margin="10"
+                    Click="DownloadAlbum_Clicked"
+                    Padding="5" Background="#61D918" FontSize="20" FontWeight="Bold"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

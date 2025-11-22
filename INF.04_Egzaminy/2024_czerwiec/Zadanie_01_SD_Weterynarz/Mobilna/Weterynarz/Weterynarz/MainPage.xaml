@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weterynarz.MainPage"
+             Background="LightGreen"
+             Shell.NavBarIsVisible="false"
+             >
+
+        <VerticalStackLayout
+            Spacing="25"
+            Margin="5">
+
+        <Label Text="Wizyta u weterynarza"
+                   Padding="10"
+                   FontSize="24"
+                   Background="SeaGreen"
+                   />
+        <Entry 
+                x:Name="entryName"
+                Placeholder="Imię i nazwisko właściciela"
+                FontSize="18"/>
+        <Label Text="Gatunek"/>
+        <ListView x:Name="listAnimals" 
+                  SelectionMode="Single"
+                  ItemSelected="Animals_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" TextColor="red"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <HorizontalStackLayout>
+            <Label Text="Ile ma lat?   " />
+            <Label Text="0" x:Name="lbAge"/>
+            <Slider x:Name="sliderAge" 
+                        Minimum="0" 
+                        Maximum="20" 
+                        WidthRequest="300"
+                        ThumbColor="red"
+                        MaximumTrackColor="White"
+                        MinimumTrackColor="White"
+                    ValueChanged="AgeChanged_Slider"/>
+        </HorizontalStackLayout>
+        <Editor 
+                x:Name="entryCel"
+                Placeholder="Cel wizyty"
+                FontSize="18"/>
+        <TimePicker x:Name="dpTime" Time="16:00" FontSize="18"/>
+        <Button Text="OK" Margin="5" 
+                    Background="LightGray" 
+                    TextColor="Black"
+                    Clicked="Save_ButtonClicked"/>
+
+        </VerticalStackLayout>
+
+
+</ContentPage>

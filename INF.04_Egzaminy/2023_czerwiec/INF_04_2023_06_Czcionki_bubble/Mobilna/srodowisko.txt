@@ -1,0 +1,4 @@
+System operacyjny – Windows 10
+Środowisko programistyczne – Visual Studio 2022
+Emulator – pixel_5_-_api_345554
+Języki programowania – C# , dla widoku XAML

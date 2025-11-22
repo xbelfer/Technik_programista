@@ -1,0 +1,71 @@
+﻿<Window x:Class="Przesylka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Przesylka"
+        mc:Ignorable="d"
+        Title="Nadaj Przesyłkę, PESEL: 00000000000" 
+        Height="380" Width="580">
+    <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <GroupBox Header="Rodzaj przesyłki">
+                    <StackPanel>
+                        <RadioButton Content="Pocztówka"
+                                     x:Name="rbPocztowka"
+                                     IsChecked="True"
+                                     Margin="10"/>
+                        <RadioButton Content="List"
+                                     x:Name="rbList"
+                                     Margin="10"/>
+                        <RadioButton Content="Paczka"
+                                     x:Name="rbPaczka"
+                                     Margin="10"/>
+                    </StackPanel>
+                </GroupBox>
+                <Button Click="SprawdzCene_ButtonClicked"
+                        Content="Sprawdź Cenę"
+                        Margin="0,10"
+                        Padding="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="pocztowka.png"
+                           x:Name="imgObrazPrzesylki"/>
+                    <Label Content="Cena: "
+                           x:Name="lbCenaPrzesylki"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           Width="100"
+                           Margin="10,0"/>
+                </StackPanel>
+            </StackPanel>
+            <GroupBox Header="Dane adresowe"
+                      Margin="40,0">
+                <StackPanel>
+                    <Label Content="Ulica z numerem"
+                           Margin="10"/>
+                    <TextBox x:Name="tbUlicaNumer"
+                             Width="200"
+                             Margin="10,0"/>
+                    <Label Content="Kod pocztowy"
+                           Margin="10"/>
+                    <TextBox x:Name="tbKodPocztowy"
+                             Width="150"
+                             Margin="10,0"
+                             HorizontalAlignment="Left"/>
+                    <Label Content="Miasto"
+                           Margin="10"/>
+                    <TextBox x:Name="tbMiasto"
+                             Width="200"
+                             Margin="10,0"/>
+
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <Button Click="Zatwierdz_ButtonClicked"
+                Content="Zatwierdź"
+                Padding="5"
+                Margin="0,10,0,0"/>
+    </StackPanel>
+</Window>
